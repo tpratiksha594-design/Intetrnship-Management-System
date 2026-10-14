@@ -1,0 +1,91 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+    background: linear-gradient(180deg, #dbeafe 0%, #eff6ff 40%, #f8fafc 100%);
+    background-attachment: fixed;
+    color: #0f172a;
+  }
+}
+
+/* Custom Scrollbar in Faint Sky Blue Theme */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #e0f2fe;
+}
+::-webkit-scrollbar-thumb {
+  background: #7dd3fc;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #38bdf8;
+}
+
+/* Faint Sky Blue Light Glassmorphism Effects */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(186, 230, 253, 0.8);
+  box-shadow: 0 10px 30px -10px rgba(14, 165, 233, 0.12);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(224, 242, 254, 0.9);
+  box-shadow: 0 4px 15px -3px rgba(14, 165, 233, 0.08);
+}
+
+.glass-card-hover {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.glass-card-hover:hover {
+  transform: translateY(-2px);
+  border-color: rgba(56, 189, 248, 0.8);
+  box-shadow: 0 12px 35px -10px rgba(14, 165, 233, 0.25);
+}
+
+.glass-input {
+  background: rgba(240, 249, 255, 0.9);
+  border: 1px solid rgba(186, 230, 253, 0.9);
+  color: #0f172a;
+  transition: all 0.2s ease;
+}
+.glass-input:focus {
+  outline: none;
+  background: #ffffff;
+  border-color: #0284c7;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.25);
+}
+
+.glow-sky {
+  box-shadow: 0 0 25px -5px rgba(56, 189, 248, 0.35);
+}
+
+/* Certificate Print Optimization */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  #printable-certificate {
+    visibility: visible !important;
+    position: absolute !important;
+    left: 0 !important;
+    top: 0 !important;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+}
